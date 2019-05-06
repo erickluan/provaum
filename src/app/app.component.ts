@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Pessoa } from './questao03/pessoa';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'provaum';
+  @Input() pessoas: Pessoa[] = [
+    { idade: 25, nome: 'Erick', tipo: 'Adulto'},
+    { idade: 35, nome: 'Jon', tipo: 'Adulto'},
+    { idade: 39, nome: 'Daenerys', tipo: 'Adulto'},
+  ];
+  adicionarPessoa(pessoa: Pessoa) {
+    console.log(pessoa);
+    this.pessoas.push(pessoa);
+  }
 }
