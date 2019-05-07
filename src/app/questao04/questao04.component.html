@@ -6,12 +6,12 @@
       <form>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputNomePessoa">Nome da pessoa</label>
-            <input #nomePessoa type="text" autocomplete="off" class="form-control" id="inputNomePessoa" (change)="nomePessoa.value" placeholder="Coloque o nome da pessoa." >
+            <label for="inputNomePessoa2">Nome da pessoa</label>
+            <input #nomePessoa type="text" autocomplete="off" class="form-control" id="inputNomePessoa2" (change)="nomePessoa.value" placeholder="Coloque o nome da pessoa." >
           </div>
           <div class="form-group col-md-6">
-            <label for="inputIdadePessoa">Idade da Pessoa</label>
-            <input #idadePessoa type="number" class="form-control" min="1" max="120" id="inputIdadePessoa" (change)="idadePessoa.value" placeholder="Coloque a idade da pessoa" >
+            <label for="inputIdadePessoa2">Idade da Pessoa</label>
+            <input #idadePessoa type="number" class="form-control" min="1" max="120" id="inputIdadePessoa2" (change)="idadePessoa.value" placeholder="Coloque a idade da pessoa" >
           </div>
         </div>
         <button [disabled]="!nomePessoa.value || !idadePessoa.value" (click)="enviarProPai(nomePessoa.value, idadePessoa.value, {nomePessoa: nomePessoa, idadePessoa: idadePessoa})" type="button" class="btn btn-primary">Adicionar Pessoa</button>
