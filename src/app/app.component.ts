@@ -7,11 +7,13 @@ import { Pessoa } from './questao03/pessoa';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'provaum';
+  title = 'Prova 1 - A';
+  description = 'Avaliação dos conhecimentos de Angular.';
+  acronym = 'P1';
   @Input() pessoas: Pessoa[] = [
     { idade: 25, nome: 'Erick', tipo: 'Adulto'},
-    { idade: 35, nome: 'Jon', tipo: 'Adulto'},
-    { idade: 39, nome: 'Daenerys', tipo: 'Adulto'},
+    { idade: 24, nome: 'Jon Snow', tipo: 'Adulto'},
+    { idade: 24, nome: 'Daenerys Targaryen', tipo: 'Adulto'},
   ];
   adicionarPessoa(pessoa: Pessoa) {
     console.log(pessoa);

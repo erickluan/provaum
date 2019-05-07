@@ -9,6 +9,7 @@ import { Pessoa } from './pessoa';
 })
 export class Questao03Component implements OnInit {
   titulo = 'Questão 03';
+  descricao = 'Adicione pessoas a uma lista e saiba se ela é criança, adolescente, adulto ou idoso.';
   nomePessoa: string;
   idadePessoa: number;
   pessoas: Pessoa[] = [];

@@ -1,3 +1,9 @@
 * {
     font-family: 'Fira Sans', sans-serif;
 }
+.jumbotron {
+    background-color: #007bff;
+}
+.display-4, .lead {
+    color: #fff;
+}

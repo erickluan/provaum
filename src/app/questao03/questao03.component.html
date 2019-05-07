@@ -1,5 +1,5 @@
 <h2>{{ titulo }}</h2>
-<p>Adicione pessoas a uma lista e saiba se ela é criança, adolescente, adulto ou idoso.</p>
+<p>{{ descricao }}</p>
 <hr class="mb-5">
 <div class="d-flex flex-row">
   <div class="col-12 align-self-center">
@@ -7,14 +7,14 @@
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputNomePessoa">Nome da pessoa</label>
-          <input #nomePessoa type="text" autocomplete="off" class="form-control" id="inputNomePessoa" placeholder="Coloque o nome da pessoa." >
+          <input #nomePessoa type="text" autocomplete="off" class="form-control" id="inputNomePessoa" (change)="nomePessoa.value" placeholder="Coloque o nome da pessoa." >
         </div>
         <div class="form-group col-md-6">
           <label for="inputIdadePessoa">Idade da Pessoa</label>
-          <input #idadePessoa type="number" class="form-control" id="inputIdadePessoa" min="1" max="120" placeholder="Coloque a idade da pessoa" >
+          <input #idadePessoa type="number" class="form-control" id="inputIdadePessoa" min="1" max="120" (change)="idadePessoa.value" placeholder="Coloque a idade da pessoa" >
         </div>
       </div>
-      <button [disabled]="nomePessoa.value && idadePessoa.value" (click)="adicionarPessoa(nomePessoa.value, idadePessoa.value, {nomePessoa: nomePessoa, idadePessoa: idadePessoa})" type="button" class="btn btn-primary">Adicionar Pessoa</button>
+      <button [disabled]="!nomePessoa.value || !idadePessoa.value" (click)="adicionarPessoa(nomePessoa.value, idadePessoa.value, {nomePessoa: nomePessoa, idadePessoa: idadePessoa})" type="button" class="btn btn-primary">Adicionar Pessoa</button>
     </form>
   </div>
 </div>
