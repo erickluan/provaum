@@ -33,5 +33,5 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
-      - run: npm build
+      # run build!
+      - run: npm run-script build --baseHref="https://erickluan.github.io/provaum/" --deployUrl="https://erickluan.github.io/provaum/dist/provaum/"
